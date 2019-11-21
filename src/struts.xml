@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="s" namespace="/requestDeal"  extends="struts-default">
+   <action name="studentDeal" class="Action.LoginAction" method="Nativate">
+   </action>
+   
+   <action name="examTypeDeal" class="Action.chooseTestTypeAction" method="testTypeOption">
+    <result name="begintest" >/testPage.jsp</result>
+   </action>
+  
+   <action name="changepasswordAction" class="Action.changePassword" method="execute">
+    <result name="goTestResult" >/login.jsp</result>
+   </action>
+  
+   
+  <action name="commitPaperAction" class="Action.commitPaper" method="judgePaper">
+    <result name="goTestResult" >/testResult.jsp</result>
+   </action>
+   
+     <action name="addQuestionAction" class="Action.addQuestionAction" method="addQuestion">
+    
+   </action>
+   
+   
+   <action name="addTest" class="Action.addTestAction" method="generateTest">
+   </action>
+    <action name="QuestionTableManager" class="Action.QuestionManagerAction" method="execute">
+
+   </action>
+   
+   <action name="ExamTableManager" class="Action.ExamManagerAction" method="execute">
+   </action>
+   
+   <action name="ScoreTableManager" class="Action.ScoreManager" method="execute">
+   </action>
+   
+   <action name="StudentManager" class="Action.StudentManager" method="execute"> </action>
+   
+   <action name="TeacherManager" class="Action.TeacherManager" method="execute"></action>
+   
+  
+  
+</package>
+
+
+ <constant name="struts.i18n.encoding" value="UTF-8"></constant>
+</struts>    
